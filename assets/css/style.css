@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito+Sans:wght@300&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+nav{
+    background-color: rgb(10 18 76);
+    color: white;
+    height: 52px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+}
+.gameInfo h1 span{
+    color: rgb(36, 59, 238);
+}
+.gameBox{
+    border: 3px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameBox:hover{
+    background-color: rgb(215, 219, 255);
+}
+
+.gameInfo{
+    padding: 0 35px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+.image img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.reset{
+    margin: 10px 15px;
+    padding: 6px 8px;
+    background: rgb(69, 84, 218);
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.line{
+    background-color: rgb(18, 18, 151);
+    /* width: 20vw; */
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 35px;
+    }
+    .gameInfo h1{
+        font-size: 1.6rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
